@@ -36,13 +36,13 @@ function App() {
     setShow(false);
   }
   return (
-    <Container>
+    <Container className="p-3 mb-2 bg-info text-black">
       <Row className="justify-content-md-center" style={{ marginTop: 60 }}>
-        <Col xs lg="2">
+        <Col className="p-3 mb-2 bg-info text-white" xs lg="2">
           <h1 style={{ textAlign: "center" }}> Halle's Blog!</h1>
         </Col>
       </Row>
-      <Row className="justify-content-md-center" style={{ marginTop: 20 }}>
+      <Row style={{ marginTop: 20 }}>
         <Col xs lg="2">
           <PostForm addPostToList={addPostToList} />
         </Col>
