@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PostForm from "./PostForm";
 import PostList from "./PostList";
 import PostModal from "./PostModal";
-import About from "./About";
+import { About, Home } from "./pages";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -53,10 +53,14 @@ function App() {
                 <li>
                   <Link to="/about">About</Link>
                 </li>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
               </ul>
             </nav>
             <Switch>
-              <Route path="/about" exact component={() => <About />} />
+              <Route path="/pages/home" exact component={() => <Home />} />
+              <Route path="/pages/about" exact component={() => <About />} />
             </Switch>
           </div>
         </Router>
