@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PostForm from "./PostForm";
 import PostList from "./PostList";
 import PostModal from "./PostModal";
-import { About, Home } from "./pages";
+import About from "./pages/About";
+import Home from "./pages/Home";
 
 function App() {
   const [posts, setPosts] = useState([]);
