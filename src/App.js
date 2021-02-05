@@ -51,17 +51,18 @@ function App() {
           <div className="container">
             <nav>
               <ul>
-                <li>
-                  <Link to="/about">About</Link>
+                <li style={{ fontFamily: "sans-serif", fontSize: "30px" }}>
+                  <Link to="/pages/about">About</Link>
                 </li>
-                <li>
-                  <Link to="/">Home</Link>
+                <li style={{ fontFamily: "sans-serif", fontSize: "30px" }}>
+                  <Link to="/pages/home">Home</Link>
                 </li>
               </ul>
             </nav>
             <Switch>
-              <Route path="/pages/home" exact component={() => <Home />} />
-              <Route path="/pages/about" exact component={() => <About />} />
+              <Route exact path="/" component={App} />
+              <Route exact path="/pages/home" component={Home} />
+              <Route exact path="/pages/about" component={About} />
             </Switch>
           </div>
         </Router>
